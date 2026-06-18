@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+:root {
+  --purple: #6D3CC9;
+  --lilac: #C9A7FF;
+  --yellow: #FFD84D;
+  --bg: #FAF7FF;
+  --dark: #211A2E;
+  --deep: #2E174F;
+  --mid: #8B6BB0;
+  --light-purple: #EEE6FF;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Scroll margin para compensar a navbar fixa (evita que titulos fiquem atras da navbar ao clicar em links) */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--lilac);
+  color: var(--deep);
+}
+
+/* Scroll reveal animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease both;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes swapInMain {
+  from { opacity: 0; transform: scale(0.982) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)     translateY(0);    }
+}
+@keyframes swapInThumb {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.animate-swap-main  { animation: swapInMain  0.95s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-swap-thumb { animation: swapInThumb 0.72s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-swap-main, .animate-swap-thumb { animation: none; }
+}
+
+@keyframes swapHintFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-3px); }
+}
+.swap-hint-badge {
+  animation: swapHintFloat 3s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .swap-hint-badge { animation: none; }
+}
+
+/* Aesthetic decorative icon animations */
+@keyframes decoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
+}
+@keyframes decoTwinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%       { transform: scale(0.78) rotate(18deg); }
+}
+.deco-float   { animation: decoFloat   4.5s ease-in-out infinite; }
+.deco-twinkle { animation: decoTwinkle 3.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .deco-float, .deco-twinkle { animation: none; }
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Noise texture overlay */
+.noise-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Gradient mesh hero */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(109,60,201,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(201,167,255,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 75%, rgba(255,216,77,0.08) 0%, transparent 50%),
+    var(--bg);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(109,60,201,0.14);
+}
+
+/* Image placeholder */
+.img-placeholder {
+  background: linear-gradient(135deg, var(--light-purple) 0%, #DDD0FF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.img-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.25) 50%, transparent 70%);
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Section label */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purple);
+  font-weight: 600;
+}
+
+/* Decorative line */
+.deco-line {
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--lilac), transparent);
+  border-radius: 1px;
+}
+
+/* Pill tag */
+.pixeloo-link {
+  color: #C9A7FF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.pixeloo-link:hover {
+  color: #FFD84D;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Whatsapp floating button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 50;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 32px rgba(37,211,102,0.5);
+}
