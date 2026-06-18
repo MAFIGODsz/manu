@@ -1,0 +1,68 @@
+/* ── PDF print styles — /media-kit-pdf route ──────────────────── */
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+.pdf-page {
+  position: relative;
+  width: 210mm;
+  min-height: 297mm;
+  max-height: 297mm;
+  overflow: hidden;
+  box-sizing: border-box;
+  break-after: page;
+  page-break-after: always;
+}
+
+.pdf-page:last-child {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.no-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* ── Screen preview (browser view) ──────────────── */
+@media screen {
+  html,
+  body {
+    background: #c0aedd !important;
+    margin: 0;
+    padding: 32px;
+  }
+
+  .pdf-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .pdf-page {
+    box-shadow: 0 12px 60px rgba(46, 23, 79, 0.32);
+  }
+}
+
+/* ── Print output ───────────────────────────────── */
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+
+  .pdf-wrap {
+    gap: 0;
+  }
+}
