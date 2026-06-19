@@ -349,7 +349,7 @@ function About() {
 
           {/* Right: single editorial photo */}
           <div style={{ position: "relative" }}>
-            <div style={{ position: "absolute", inset: 0, borderRadius: "12pt", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: "10mm", borderRadius: "12pt", overflow: "hidden" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/sobre-manu-2.jpg" alt="Manu Freixas"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 10%" }} />
