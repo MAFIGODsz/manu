@@ -858,7 +858,7 @@ function Contact() {
           </div>
 
           {/* Legal notice + WhatsApp CTA */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "5mm" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "5mm", marginTop: "5mm" }}>
             {/* Notice box */}
             <div style={{
               padding: "10pt 13pt", borderRadius: "10pt",
@@ -879,7 +879,7 @@ function Contact() {
             </div>
 
             {/* WhatsApp button */}
-            <a href="https://wa.me/5521964068920" target="_blank" rel="noopener noreferrer"
+            <a href="https://api.whatsapp.com/send/?phone=5521964068920&text=Ol%C3%A1%21+Vi+o+media+kit+da+Manu+Freixas+e+gostaria+de+fazer+uma+proposta.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"
                style={{
                  display: "inline-flex", alignItems: "center", gap: "7pt",
                  padding: "9pt 18pt", borderRadius: "100pt",
@@ -898,10 +898,10 @@ function Contact() {
 
           <div style={{ paddingTop: "5mm", borderTop: "1px solid rgba(201,167,255,0.08)",
             display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0 }}>
+            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.50)", margin: 0 }}>
               © 2026 Manu Freixas · Todos os direitos reservados
             </p>
-            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0, whiteSpace: "nowrap" }}>
+            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.50)", margin: 0, whiteSpace: "nowrap" }}>
               Desenvolvido por{" "}
               <a href="https://instagram.com/thepixeloo" target="_blank" rel="noopener noreferrer"
                  style={{ ...DM, fontSize: "8.5pt", fontWeight: 600, color: LILAC,
