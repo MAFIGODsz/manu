@@ -330,7 +330,7 @@ function About() {
 
             {/* Legal box with icon */}
             <div style={{
-              marginTop: "auto", padding: "10pt 13pt", borderRadius: "10pt",
+              marginTop: "auto", marginBottom: "10mm", padding: "10pt 13pt", borderRadius: "10pt",
               background: "rgba(109,60,201,0.06)", border: "1px solid rgba(109,60,201,0.16)",
               display: "flex", gap: "8pt", alignItems: "flex-start",
             }}>
