@@ -173,6 +173,31 @@ function SectionLabel({ children, light }: { children: React.ReactNode; light?: 
   );
 }
 
+/* ── Page mark ─────────────────────────────────────────────────── */
+const TOTAL_PAGES = 8;
+function PageMark({ page, dark }: { page: number; dark?: boolean }) {
+  const label = `${String(page).padStart(2, "0")} / ${String(TOTAL_PAGES).padStart(2, "0")}`;
+  return (
+    <div style={{
+      position: "absolute", bottom: "5.5mm", right: "5.5mm", zIndex: 50,
+      display: "flex", alignItems: "center", gap: "4pt",
+      padding: "2.5pt 7pt", borderRadius: "100pt",
+      background: dark ? "rgba(255,255,255,0.05)" : "rgba(109,60,201,0.07)",
+      border: `1px solid ${dark ? "rgba(201,167,255,0.14)" : "rgba(109,60,201,0.13)"}`,
+    }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/favicon.png" alt="" aria-hidden="true"
+        style={{ width: "9pt", height: "9pt", objectFit: "contain", flexShrink: 0 }} />
+      <span style={{
+        ...DM, fontSize: "7pt", fontWeight: 600, letterSpacing: "0.13em",
+        color: dark ? "rgba(201,167,255,0.60)" : "rgba(46,23,79,0.50)",
+      }}>
+        {label}
+      </span>
+    </div>
+  );
+}
+
 /* ── Page 1: Cover ─────────────────────────────────────────────── */
 function Cover() {
   return (
@@ -247,6 +272,7 @@ function Cover() {
           </div>
         </div>
       </div>
+      <PageMark page={1} dark />
     </div>
   );
 }
@@ -333,6 +359,7 @@ function About() {
           </div>
         </div>
       </div>
+      <PageMark page={2} />
     </div>
   );
 }
@@ -416,6 +443,7 @@ function Profile() {
           </div>
         </div>
       </div>
+      <PageMark page={3} dark />
     </div>
   );
 }
@@ -502,6 +530,7 @@ function Digital() {
           </div>
         </div>
       </div>
+      <PageMark page={4} dark />
     </div>
   );
 }
@@ -591,6 +620,7 @@ function FormationAreas() {
           </div>
         </div>
       </div>
+      <PageMark page={5} />
     </div>
   );
 }
@@ -664,6 +694,7 @@ function Portfolio() {
           </a>
         </div>
       </div>
+      <PageMark page={6} dark />
     </div>
   );
 }
@@ -758,6 +789,7 @@ function Works() {
           </span>
         </div>
       </div>
+      <PageMark page={7} />
     </div>
   );
 }
@@ -897,6 +929,7 @@ function Contact() {
           <div style={{ position: "absolute", top: "0", bottom: "0", right: 0, width: "3pt", background: YELLOW }} />
         </div>
       </div>
+      <PageMark page={8} dark />
     </div>
   );
 }
