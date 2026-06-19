@@ -152,12 +152,11 @@ function SectionLabel({ children, light }: { children: React.ReactNode; light?: 
     <span style={{
       ...DM,
       display: "inline-block",
-      fontSize: "7pt",
+      fontSize: "8.5pt",
       letterSpacing: "0.18em",
       textTransform: "uppercase" as const,
-      fontWeight: 600,
       color: light ? "rgba(255,255,255,0.93)" : VIOLET,
-      padding: "3pt 9pt",
+      padding: "4pt 11pt",
       borderRadius: "100pt",
       background: light ? "rgba(46,23,79,0.50)" : "rgba(109,60,201,0.09)",
       border: `1px solid ${light ? "rgba(201,167,255,0.40)" : "rgba(109,60,201,0.18)"}`,
@@ -197,7 +196,7 @@ function Cover() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/logo-manu-freixas-light.png" alt="Manu Freixas"
             style={{ height: "9mm", width: "auto" }} />
-          <span style={{ ...DM, fontSize: "7pt", letterSpacing: "0.15em",
+          <span style={{ ...DM, fontSize: "8.5pt", letterSpacing: "0.15em",
             textTransform: "uppercase", color: "rgba(201,167,255,0.5)" }}>
             Media Kit Digital · 2026
           </span>
@@ -220,10 +219,10 @@ function Cover() {
             <svg width="7" height="9" viewBox="0 0 24 24" fill={LILAC}>
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
             </svg>
-            <span style={{ ...DM, fontSize: "8pt", color: LILAC }}>Rio de Janeiro — RJ</span>
+            <span style={{ ...DM, fontSize: "9.5pt", color: LILAC }}>Rio de Janeiro — RJ</span>
           </div>
 
-          <p style={{ ...DM, fontSize: "9.5pt", color: "rgba(255,255,255,0.72)", fontWeight: 300,
+          <p style={{ ...DM, fontSize: "11pt", color: "rgba(255,255,255,0.72)", fontWeight: 300,
             lineHeight: 1.55, maxWidth: "145mm", margin: 0 }}>
             Versatilidade, presença e comunicação para moda, campanhas,
             audiovisual, desfiles e projetos digitais.
@@ -232,7 +231,7 @@ function Cover() {
           <div style={{ display: "flex", gap: "5mm" }}>
             {["Versatilidade", "Oratória", "Presença Digital"].map((tag) => (
               <span key={tag} style={{
-                ...DM, fontSize: "7.5pt", padding: "2.5pt 8pt", borderRadius: "100pt",
+                ...DM, fontSize: "9pt", padding: "3.5pt 10pt", borderRadius: "100pt",
                 background: "rgba(255,216,77,0.13)", color: YELLOW,
                 border: "1px solid rgba(255,216,77,0.32)",
               }}>
@@ -267,18 +266,18 @@ function About() {
 
           {/* Left */}
           <div style={{ display: "flex", flexDirection: "column", gap: "5mm" }}>
-            <p style={{ ...DM, fontSize: "9.5pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
+            <p style={{ ...DM, fontSize: "11pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
               Manu Freixas é uma artista mirim, modelo e criadora de conteúdo do Rio de Janeiro.
               Com carisma, desenvoltura e excelente comunicação, Manu transita com naturalidade por
               fotografia, moda, provador, desfiles, atuação e projetos digitais.
             </p>
-            <p style={{ ...DM, fontSize: "9.5pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
+            <p style={{ ...DM, fontSize: "11pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
               Sua rotina de formação inclui canto, passarela, teatro, TV e cinema, ginástica,
               ballet e funcional — atividades que fortalecem sua{" "}
               <strong style={{ fontWeight: 600, color: PURPLE }}>expressão corporal</strong>,
               presença cênica e disciplina.
             </p>
-            <p style={{ ...DM, fontSize: "9.5pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
+            <p style={{ ...DM, fontSize: "11pt", color: "#4A3B62", lineHeight: 1.68, fontWeight: 300, margin: 0 }}>
               Com presença ativa no Instagram, TikTok e YouTube, Manu constrói uma imagem
               moderna, autêntica e versátil para marcas, lojas e produções.
             </p>
@@ -287,7 +286,7 @@ function About() {
             <div style={{ display: "flex", flexWrap: "wrap" as const, gap: "3mm" }}>
               {["Carisma", "Versatilidade", "Oratória", "Disciplina"].map((attr) => (
                 <span key={attr} style={{
-                  ...DM, fontSize: "8pt", fontWeight: 500,
+                  ...DM, fontSize: "9.5pt", fontWeight: 500,
                   padding: "3pt 10pt", borderRadius: "100pt",
                   background: "rgba(109,60,201,0.08)", color: PURPLE,
                   border: "1px solid rgba(109,60,201,0.14)",
@@ -308,7 +307,7 @@ function About() {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <polyline points="9 12 11 14 15 10" />
               </svg>
-              <p style={{ ...DM, fontSize: "8.5pt", color: "#6A5980", margin: 0, lineHeight: 1.6 }}>
+              <p style={{ ...DM, fontSize: "10pt", color: "#6A5980", margin: 0, lineHeight: 1.6 }}>
                 <strong style={{ fontWeight: 600, color: VIOLET }}>Responsável legal</strong>
                 {" — "}Contatos, propostas e parcerias são tratados diretamente com a responsável
                 legal de Manu Freixas.
@@ -349,13 +348,13 @@ function Profile() {
 
         {/* Header row */}
         <div style={{ display: "flex", flexDirection: "column", gap: "3mm" }}>
-          <span style={{ ...DM, fontSize: "7pt", letterSpacing: "0.18em", textTransform: "uppercase",
+          <span style={{ ...DM, fontSize: "8.5pt", letterSpacing: "0.18em", textTransform: "uppercase",
             color: "rgba(201,167,255,0.5)", fontWeight: 600 }}>Especificações</span>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
             <h2 style={{ ...PF, fontSize: "28pt", fontWeight: 700, color: "white", margin: 0, lineHeight: 1.1 }}>
               Perfil <span style={{ color: LILAC, fontStyle: "italic" }}>técnico</span>
             </h2>
-            <span style={{ ...DM, fontSize: "7.5pt", color: "rgba(201,167,255,0.4)", letterSpacing: "0.12em" }}>Ficha de casting · 2026</span>
+            <span style={{ ...DM, fontSize: "9pt", color: "rgba(201,167,255,0.4)", letterSpacing: "0.12em" }}>Ficha de casting · 2026</span>
           </div>
           <div style={{ width: "16mm", height: "1.5pt", background: YELLOW, borderRadius: "1pt" }} />
         </div>
@@ -376,11 +375,11 @@ function Profile() {
                   <svg width="14" height="14" viewBox="0 0 24 24" fill={LILAC} style={{ opacity: 0.7 }}>
                     <path d={item.icon} />
                   </svg>
-                  <p style={{ ...DM, fontSize: "6.5pt", textTransform: "uppercase", letterSpacing: "0.12em",
+                  <p style={{ ...DM, fontSize: "8pt", textTransform: "uppercase", letterSpacing: "0.12em",
                     color: "rgba(201,167,255,0.4)", margin: 0 }}>
                     {item.label}
                   </p>
-                  <p style={{ ...PF, fontSize: "10.5pt", fontWeight: 600, color: "white", margin: 0, lineHeight: 1.2 }}>
+                  <p style={{ ...PF, fontSize: "12pt", fontWeight: 600, color: "white", margin: 0, lineHeight: 1.2 }}>
                     {item.value}
                   </p>
                 </div>
@@ -391,10 +390,10 @@ function Profile() {
             <div style={{ padding: "9pt 12pt", borderRadius: "9pt",
               background: "rgba(109,60,201,0.25)", border: "1px solid rgba(109,60,201,0.4)",
               display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(255,255,255,0.72)", margin: 0, fontWeight: 300 }}>
+              <p style={{ ...DM, fontSize: "10pt", color: "rgba(255,255,255,0.72)", margin: 0, fontWeight: 300 }}>
                 Interessado em trabalhar com Manu?
               </p>
-              <span style={{ ...DM, fontSize: "8pt", fontWeight: 600, color: LILAC, whiteSpace: "nowrap" }}>
+              <span style={{ ...DM, fontSize: "9.5pt", fontWeight: 600, color: LILAC, whiteSpace: "nowrap" }}>
                 Ver contatos → pág. 8
               </span>
             </div>
@@ -409,8 +408,8 @@ function Profile() {
               background: "linear-gradient(to top, rgba(46,23,79,0.5) 0%, transparent 50%)" }} />
             {/* Name tag at bottom */}
             <div style={{ position: "absolute", bottom: "8pt", left: "8pt", right: "8pt" }}>
-              <p style={{ ...PF, fontSize: "10pt", fontWeight: 700, color: "white", margin: 0 }}>Manu Freixas</p>
-              <p style={{ ...DM, fontSize: "7pt", color: "rgba(201,167,255,0.7)", margin: 0 }}>Artista · Modelo · Criadora</p>
+              <p style={{ ...PF, fontSize: "11.5pt", fontWeight: 700, color: "white", margin: 0 }}>Manu Freixas</p>
+              <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.7)", margin: 0 }}>Artista · Modelo · Criadora</p>
             </div>
           </div>
         </div>
@@ -426,7 +425,7 @@ function Digital() {
       <div style={{ padding: "12mm 14mm", display: "flex", flexDirection: "column", gap: "6mm" }}>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "3mm" }}>
-          <span style={{ ...DM, fontSize: "7pt", letterSpacing: "0.18em", textTransform: "uppercase",
+          <span style={{ ...DM, fontSize: "8.5pt", letterSpacing: "0.18em", textTransform: "uppercase",
             color: "rgba(201,167,255,0.5)", fontWeight: 600 }}>Presença Digital</span>
           <h2 style={{ ...PF, fontSize: "26pt", fontWeight: 700, color: "white", margin: 0, lineHeight: 1.1 }}>
             Números que{" "}
@@ -444,14 +443,14 @@ function Digital() {
               background: "rgba(255,255,255,0.03)",
             }}>
               <div style={{ padding: "9pt 11pt 8pt", background: s.gradient }}>
-                <p style={{ ...PF, fontSize: "11pt", fontWeight: 700, color: "white", margin: "0 0 1pt" }}>{s.platform}</p>
-                <p style={{ ...DM, fontSize: "7pt", color: "rgba(255,255,255,0.7)", margin: 0 }}>{s.handle}</p>
+                <p style={{ ...PF, fontSize: "12.5pt", fontWeight: 700, color: "white", margin: "0 0 1pt" }}>{s.platform}</p>
+                <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(255,255,255,0.7)", margin: 0 }}>{s.handle}</p>
               </div>
               <div style={{ padding: "9pt 11pt 9pt", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5pt" }}>
                 {s.metrics.map((m) => (
                   <div key={m.label}>
-                    <p style={{ ...PF, fontSize: "9.5pt", fontWeight: 700, color: LILAC, margin: "0 0 1pt" }}>{m.value}</p>
-                    <p style={{ ...DM, fontSize: "6.5pt", color: "rgba(201,167,255,0.38)", margin: 0, lineHeight: 1.3 }}>{m.label}</p>
+                    <p style={{ ...PF, fontSize: "11pt", fontWeight: 700, color: LILAC, margin: "0 0 1pt" }}>{m.value}</p>
+                    <p style={{ ...DM, fontSize: "8pt", color: "rgba(201,167,255,0.38)", margin: 0, lineHeight: 1.3 }}>{m.label}</p>
                   </div>
                 ))}
               </div>
@@ -467,7 +466,7 @@ function Digital() {
           display: "flex", alignItems: "center", gap: "10pt",
         }}>
           <div style={{ width: "3pt", height: "28pt", background: YELLOW, borderRadius: "2pt", flexShrink: 0 }} />
-          <p style={{ ...DM, fontSize: "9pt", color: "rgba(201,167,255,0.7)", margin: 0, lineHeight: 1.5, fontWeight: 300 }}>
+          <p style={{ ...DM, fontSize: "10.5pt", color: "rgba(201,167,255,0.7)", margin: 0, lineHeight: 1.5, fontWeight: 300 }}>
             <strong style={{ color: "white", fontWeight: 500 }}>Alcance orgânico, audiência real e presença em crescimento</strong>
             {" — "}números colhidos diretamente das plataformas, sem impulsionamento pago.
           </p>
@@ -475,7 +474,7 @@ function Digital() {
 
         {/* Prints */}
         <div>
-          <p style={{ ...DM, fontSize: "7.5pt", textTransform: "uppercase", letterSpacing: "0.14em",
+          <p style={{ ...DM, fontSize: "9pt", textTransform: "uppercase", letterSpacing: "0.14em",
             color: "rgba(201,167,255,0.35)", margin: "0 0 3mm" }}>
             Estatísticas reais das plataformas
           </p>
@@ -515,7 +514,7 @@ function FormationAreas() {
               <span style={{ color: VIOLET, fontStyle: "italic" }}>contínuo</span>
             </h2>
             <Divider />
-            <p style={{ ...DM, fontSize: "8pt", color: "#6A5980", fontWeight: 300, margin: 0, lineHeight: 1.5 }}>
+            <p style={{ ...DM, fontSize: "9.5pt", color: "#6A5980", fontWeight: 300, margin: 0, lineHeight: 1.5 }}>
               Aprendizado que sustenta a versatilidade e a presença de Manu.
             </p>
           </div>
@@ -532,7 +531,7 @@ function FormationAreas() {
                     letterSpacing: "0.08em", color: c.text, margin: "0 0 3pt", opacity: 0.7 }}>
                     {item.cat}
                   </p>
-                  <p style={{ ...PF, fontSize: "9.5pt", fontWeight: 600, color: PURPLE, margin: 0, lineHeight: 1.2 }}>
+                  <p style={{ ...PF, fontSize: "11pt", fontWeight: 600, color: PURPLE, margin: 0, lineHeight: 1.2 }}>
                     {item.label}
                   </p>
                 </div>
@@ -553,7 +552,7 @@ function FormationAreas() {
               <span style={{ color: VIOLET, fontStyle: "italic" }}>atuação</span>
             </h2>
             <Divider />
-            <p style={{ ...DM, fontSize: "8pt", color: "#6A5980", fontWeight: 300, margin: 0, lineHeight: 1.5 }}>
+            <p style={{ ...DM, fontSize: "9.5pt", color: "#6A5980", fontWeight: 300, margin: 0, lineHeight: 1.5 }}>
               Presença versátil em moda, audiovisual e conteúdo digital.
             </p>
           </div>
@@ -572,10 +571,10 @@ function FormationAreas() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <p style={{ ...PF, fontSize: "9.5pt", fontWeight: 600, color: PURPLE, margin: "0 0 1pt" }}>
+                  <p style={{ ...PF, fontSize: "11pt", fontWeight: 600, color: PURPLE, margin: "0 0 1pt" }}>
                     {area.title}
                   </p>
-                  <p style={{ ...DM, fontSize: "7.5pt", color: "#8A7CAA", margin: 0, lineHeight: 1.4, fontWeight: 300 }}>
+                  <p style={{ ...DM, fontSize: "9pt", color: "#8A7CAA", margin: 0, lineHeight: 1.4, fontWeight: 300 }}>
                     {area.short}
                   </p>
                 </div>
@@ -605,7 +604,7 @@ function Portfolio() {
             </h2>
             <Divider light />
           </div>
-          <p style={{ ...DM, fontSize: "8pt", color: "rgba(201,167,255,0.38)", margin: 0 }}>
+          <p style={{ ...DM, fontSize: "9.5pt", color: "rgba(201,167,255,0.38)", margin: 0 }}>
             Ensaios · Desfiles · Moda · Conteúdo
           </p>
         </div>
@@ -624,7 +623,7 @@ function Portfolio() {
               {/* Category tag */}
               <span style={{
                 position: "absolute", bottom: "6pt", left: "7pt",
-                ...DM, fontSize: "6.5pt", letterSpacing: "0.08em", textTransform: "uppercase",
+                ...DM, fontSize: "8pt", letterSpacing: "0.08em", textTransform: "uppercase",
                 color: "rgba(255,255,255,0.85)",
                 background: "rgba(26,10,46,0.45)",
                 padding: "2pt 6pt", borderRadius: "100pt",
@@ -654,7 +653,7 @@ function Works() {
             <span style={{ color: VIOLET, fontStyle: "italic" }}>parcerias</span>
           </h2>
           <Divider />
-          <p style={{ ...DM, fontSize: "9pt", color: "#6A5980", fontWeight: 300, margin: 0 }}>
+          <p style={{ ...DM, fontSize: "10.5pt", color: "#6A5980", fontWeight: 300, margin: 0 }}>
             Marcas e projetos em que Manu participou com presença, autenticidade e resultado.
           </p>
         </div>
@@ -692,7 +691,7 @@ function Works() {
                 {/* Category badge on image */}
                 <span style={{
                   position: "absolute", top: "8pt", left: "8pt",
-                  ...DM, fontSize: "6.5pt", padding: "2.5pt 7pt", borderRadius: "100pt",
+                  ...DM, fontSize: "8pt", padding: "2.5pt 7pt", borderRadius: "100pt",
                   background: "rgba(255,248,220,0.95)", color: "#8A6800",
                   border: "1px solid rgba(255,216,77,0.3)",
                 }}>
@@ -701,14 +700,14 @@ function Works() {
               </div>
               {/* Compact text */}
               <div style={{ padding: "9pt 11pt 10pt", display: "flex", flexDirection: "column", gap: "3pt" }}>
-                <p style={{ ...PF, fontSize: "11.5pt", fontWeight: 600, color: PURPLE, margin: 0 }}>{work.title}</p>
-                <p style={{ ...DM, fontSize: "8pt", color: "#6A5980", margin: 0,
+                <p style={{ ...PF, fontSize: "13pt", fontWeight: 600, color: PURPLE, margin: 0 }}>{work.title}</p>
+                <p style={{ ...DM, fontSize: "9.5pt", color: "#6A5980", margin: 0,
                   fontWeight: 300, lineHeight: 1.45 }}>{work.desc}</p>
                 <div style={{ display: "flex", alignItems: "center", gap: "5pt", marginTop: "2pt" }}>
                   <svg width="9" height="9" viewBox="0 0 24 24" fill={VIOLET} opacity={0.7}>
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                   </svg>
-                  <span style={{ ...DM, fontSize: "7.5pt", color: VIOLET }}>{work.handle}</span>
+                  <span style={{ ...DM, fontSize: "9pt", color: VIOLET }}>{work.handle}</span>
                 </div>
               </div>
             </div>
@@ -719,10 +718,10 @@ function Works() {
         <div style={{ padding: "9pt 14pt", borderRadius: "10pt", marginTop: "auto",
           background: "rgba(109,60,201,0.08)", border: "1px solid rgba(109,60,201,0.12)",
           display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ ...DM, fontSize: "9pt", color: PURPLE, margin: 0, fontWeight: 300 }}>
+          <p style={{ ...DM, fontSize: "10.5pt", color: PURPLE, margin: 0, fontWeight: 300 }}>
             Sua marca pode ser a próxima parceira de Manu Freixas.
           </p>
-          <span style={{ ...DM, fontSize: "8pt", fontWeight: 600, color: VIOLET, whiteSpace: "nowrap" }}>
+          <span style={{ ...DM, fontSize: "9.5pt", fontWeight: 600, color: VIOLET, whiteSpace: "nowrap" }}>
             Contatos → pág. 8
           </span>
         </div>
@@ -759,7 +758,7 @@ function Contact() {
 
           <div style={{ width: "16mm", height: "1.5pt", background: YELLOW, borderRadius: "1pt" }} />
 
-          <p style={{ ...DM, fontSize: "9pt", color: "rgba(255,255,255,0.6)", fontWeight: 300,
+          <p style={{ ...DM, fontSize: "10.5pt", color: "rgba(255,255,255,0.6)", fontWeight: 300,
             lineHeight: 1.6, margin: 0 }}>
             Para propostas comerciais, campanhas, editoriais, eventos e parcerias,
             entre em contato com a responsável legal de Manu Freixas.
@@ -783,9 +782,9 @@ function Contact() {
                 </div>
                 <div style={{ flex: 1, height: "1px", background: "rgba(201,167,255,0.08)" }} />
                 <div style={{ textAlign: "right" as const }}>
-                  <p style={{ ...DM, fontSize: "6.5pt", textTransform: "uppercase", letterSpacing: "0.12em",
+                  <p style={{ ...DM, fontSize: "8pt", textTransform: "uppercase", letterSpacing: "0.12em",
                     color: "rgba(201,167,255,0.35)", margin: "0 0 1pt" }}>{c.label}</p>
-                  <p style={{ ...PF, fontSize: "10pt", fontWeight: 600, color: "white", margin: 0 }}>
+                  <p style={{ ...PF, fontSize: "11.5pt", fontWeight: 600, color: "white", margin: 0 }}>
                     {c.value}
                   </p>
                 </div>
@@ -797,10 +796,10 @@ function Contact() {
 
           <div style={{ paddingTop: "5mm", borderTop: "1px solid rgba(201,167,255,0.08)",
             display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <p style={{ ...DM, fontSize: "7pt", color: "rgba(201,167,255,0.22)", margin: 0 }}>
+            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0 }}>
               © 2026 Manu Freixas · Todos os direitos reservados
             </p>
-            <p style={{ ...DM, fontSize: "7pt", color: "rgba(201,167,255,0.18)", margin: 0 }}>
+            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.18)", margin: 0 }}>
               Desenvolvido por Pixeloo
             </p>
           </div>
