@@ -447,12 +447,7 @@ function Digital() {
                 <p style={{ ...PF, fontSize: "11pt", fontWeight: 700, color: "white", margin: "0 0 1pt" }}>{s.platform}</p>
                 <p style={{ ...DM, fontSize: "7pt", color: "rgba(255,255,255,0.7)", margin: 0 }}>{s.handle}</p>
               </div>
-              {/* Highlight number */}
-              <div style={{ padding: "7pt 11pt 5pt", borderBottom: "1px solid rgba(201,167,255,0.08)" }}>
-                <p style={{ ...PF, fontSize: "16pt", fontWeight: 700, color: YELLOW, margin: "0 0 1pt", lineHeight: 1 }}>{s.highlight}</p>
-                <p style={{ ...DM, fontSize: "6.5pt", color: "rgba(201,167,255,0.45)", margin: 0, textTransform: "uppercase", letterSpacing: "0.1em" }}>{s.highlightLabel}</p>
-              </div>
-              <div style={{ padding: "7pt 11pt 9pt", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5pt" }}>
+              <div style={{ padding: "9pt 11pt 9pt", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5pt" }}>
                 {s.metrics.map((m) => (
                   <div key={m.label}>
                     <p style={{ ...PF, fontSize: "9.5pt", fontWeight: 700, color: LILAC, margin: "0 0 1pt" }}>{m.value}</p>
@@ -487,12 +482,14 @@ function Digital() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "5mm" }}>
             {STATS.map((s) => (
               <div key={s.platform} style={{
-                borderRadius: "10pt", overflow: "hidden", aspectRatio: "4/5",
+                borderRadius: "10pt", overflow: "hidden", aspectRatio: "9/16",
                 border: "1px solid rgba(201,167,255,0.1)",
+                background: "rgba(255,255,255,0.04)",
+                display: "flex", alignItems: "center", justifyContent: "center",
               }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={s.printImage} alt={`${s.platform} analytics`}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top center" }} />
+                  style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
             ))}
           </div>
@@ -749,7 +746,7 @@ function Contact() {
 
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/logo-manu-freixas-light.png" alt="Manu Freixas"
-            style={{ height: "8mm", width: "auto" }} />
+            style={{ height: "9mm", width: "auto", objectFit: "contain", alignSelf: "flex-start" }} />
 
           <div>
             <h2 style={{ ...PF, fontSize: "26pt", fontWeight: 700, color: "white", margin: 0, lineHeight: 1.05 }}>
