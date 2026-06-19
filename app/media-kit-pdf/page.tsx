@@ -156,11 +156,12 @@ function SectionLabel({ children, light }: { children: React.ReactNode; light?: 
       letterSpacing: "0.18em",
       textTransform: "uppercase" as const,
       fontWeight: 600,
-      color: light ? "rgba(201,167,255,0.55)" : VIOLET,
+      color: light ? "rgba(255,255,255,0.93)" : VIOLET,
       padding: "3pt 9pt",
       borderRadius: "100pt",
-      background: light ? "rgba(201,167,255,0.09)" : "rgba(109,60,201,0.09)",
-      border: `1px solid ${light ? "rgba(201,167,255,0.18)" : "rgba(109,60,201,0.18)"}`,
+      background: light ? "rgba(46,23,79,0.50)" : "rgba(109,60,201,0.09)",
+      border: `1px solid ${light ? "rgba(201,167,255,0.40)" : "rgba(109,60,201,0.18)"}`,
+      fontWeight: light ? 700 : 600,
     }}>
       {children}
     </span>
@@ -315,30 +316,16 @@ function About() {
             </div>
           </div>
 
-          {/* Right: editorial photo composition */}
+          {/* Right: single editorial photo */}
           <div style={{ position: "relative" }}>
-            {/* Main large photo */}
             <div style={{ position: "absolute", inset: 0, borderRadius: "12pt", overflow: "hidden" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/sobre-manu.jpg" alt="Manu Freixas"
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 15%" }} />
+              <img src="/images/sobre-manu-2.jpg" alt="Manu Freixas"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 10%" }} />
               <div style={{ position: "absolute", inset: 0,
                 background: "linear-gradient(to top, rgba(46,23,79,0.25) 0%, transparent 40%)" }} />
             </div>
-            {/* Overlapping secondary photo — bottom-left */}
-            <div style={{
-              position: "absolute", bottom: "8pt", left: "-10pt",
-              width: "52%", aspectRatio: "4/5",
-              borderRadius: "10pt", overflow: "hidden",
-              border: "3px solid white",
-              boxShadow: "0 8px 28px rgba(46,23,79,0.35)",
-              zIndex: 2,
-            }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/sobre-manu-2.jpg" alt="Manu nos bastidores"
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />
-            </div>
-            {/* Decorative yellow dot */}
+            {/* Decorative yellow accent */}
             <div style={{ position: "absolute", bottom: "9mm", right: "0",
               width: "7mm", height: "7mm", borderRadius: "50%",
               background: YELLOW, opacity: 0.85, zIndex: 3 }} />
