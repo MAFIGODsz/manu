@@ -832,7 +832,7 @@ function Contact() {
             <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0 }}>
               © 2026 Manu Freixas · Todos os direitos reservados
             </p>
-            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0, display: "inline-flex", alignItems: "baseline", gap: "3pt" }}>
+            <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.22)", margin: 0, whiteSpace: "nowrap" }}>
               Desenvolvido por{" "}
               <a href="https://instagram.com/thepixeloo" target="_blank" rel="noopener noreferrer"
                  style={{ ...DM, fontSize: "8.5pt", fontWeight: 600, color: LILAC,
