@@ -642,6 +642,27 @@ function Portfolio() {
             </div>
           ))}
         </div>
+
+        {/* Portfolio CTA */}
+        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <a href="https://www.manufreixas.com.br/#portfolio" target="_blank" rel="noopener noreferrer"
+             style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "5pt" }}>
+            <span style={{ ...DM, fontSize: "9.5pt", color: "rgba(201,167,255,0.45)", fontWeight: 300 }}>
+              Veja o portfólio completo em
+            </span>
+            <span style={{ ...DM, fontSize: "9.5pt", fontWeight: 600, color: LILAC,
+              textDecoration: "underline", textDecorationColor: YELLOW,
+              textUnderlineOffset: "2pt", textDecorationThickness: "1px" }}>
+              manufreixas.com.br
+            </span>
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke={LILAC}
+              strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}>
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   );
