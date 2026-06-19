@@ -896,7 +896,7 @@ function Contact() {
             </a>
           </div>
 
-          <div style={{ paddingTop: "5mm", borderTop: "1px solid rgba(201,167,255,0.08)",
+          <div style={{ marginTop: "auto", paddingTop: "5mm", borderTop: "1px solid rgba(201,167,255,0.20)",
             display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <p style={{ ...DM, fontSize: "8.5pt", color: "rgba(201,167,255,0.50)", margin: 0 }}>
               © 2026 Manu Freixas · Todos os direitos reservados
