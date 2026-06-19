@@ -330,10 +330,6 @@ function About() {
               <div style={{ position: "absolute", inset: 0,
                 background: "linear-gradient(to top, rgba(46,23,79,0.25) 0%, transparent 40%)" }} />
             </div>
-            {/* Decorative yellow accent */}
-            <div style={{ position: "absolute", bottom: "9mm", right: "0",
-              width: "7mm", height: "7mm", borderRadius: "50%",
-              background: YELLOW, opacity: 0.85, zIndex: 3 }} />
           </div>
         </div>
       </div>
